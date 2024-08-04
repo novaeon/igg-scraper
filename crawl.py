@@ -19,7 +19,7 @@ if response.status_code == 200:
     link_data = []
     session = requests.Session()
 
-    for i, link in enumerate(links[:55]):
+    for i, link in enumerate(links):
         #start = time.time()
         print(i, link.get_text(strip=True), link.get('href'))
         
