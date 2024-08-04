@@ -19,9 +19,9 @@ if response.status_code == 200:
     link_data = []
     session = requests.Session()
 
-    for i, link in enumerate(links):
+    for i, link in enumerate(links[:55]):
         #start = time.time()
-        print(i)
+        print(i, link.get_text(strip=True), link.get('href'))
         
         magnet, size, date = torrent.get(session, link.get('href'))
         

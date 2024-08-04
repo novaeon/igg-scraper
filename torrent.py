@@ -15,7 +15,7 @@ def bluemediafiles_decode_key(encoded):
 game_button_pattern = re.compile(r'<a\s+href="(https://gamedownloadurl\.lol/[^"]+)"')
 encoded_key_pattern = re.compile(r'Goroi_n_Create_Button\("(?P<encoded>[^"]+)"\);')
 magnet_link_pattern = re.compile(r'<a class="button" href="(magnet:[^"]+)"')
-file_size_pattern = re.compile(r'<span class="uk-text-meta">Release Size: </span>(\d+(?:\.\d+)?(?:\s?(?:MB|GB)))</p>')
+file_size_pattern = re.compile(r'<span class="uk-text-meta">Release Size: </span>(\d+(?:(\.|\,)\d+)?(?:\s?(?:MB|GB)))</p>')
 datetime_pattern = re.compile(r'<time datetime="([^"]+)"')
 
 def get(session, url):
